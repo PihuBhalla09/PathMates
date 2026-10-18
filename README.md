@@ -1,37 +1,112 @@
-# `react`
+# PathMates
 
-React is a JavaScript library for creating user interfaces.
+PathMates is a platform that helps students connect with alumni, explore career opportunities, save professional connections, and request mentorship sessions.
 
-The `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.
+## Features
 
-**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.
+- **Alumni Directory:** Discover alumni and explore their professional backgrounds.
+- **Search and Filters:** Find relevant alumni and opportunities.
+- **Career Opportunities:** Browse internships, jobs, and other opportunities.
+- **Saved Connections:** Save alumni profiles for future reference.
+- **Mentorship Requests:** Request mentorship sessions with alumni.
+- **Authentication:** Sign in using email-based OTP authentication.
+- **Responsive Design:** Access the platform across desktop and mobile devices.
 
-## Usage
+## Tech Stack
 
-```js
-import { useState } from 'react';
-import { createRoot } from 'react-dom/client';
+- **Frontend:** React, Vite
+- **Styling:** CSS
+- **Icons:** Lucide React
+- **Backend and Database:** Supabase
+- **Authentication:** Supabase Auth
 
-function Counter() {
-  const [count, setCount] = useState(0);
-  return (
-    <>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
-    </>
-  );
-}
+## Getting Started
 
-const root = createRoot(document.getElementById('root'));
-root.render(<Counter />);
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- npm
+- A Supabase account
+
+
+
+4. Create a `.env.local` file in the root directory.
+
+5. Add your Supabase project credentials:
+
+   ```env
+   VITE_SUPABASE_URL=your_supabase_project_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_publishable_or_anon_key
+   ```
+
+6. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+7. Open the local URL displayed in your terminal.
+
+## Supabase Setup
+
+PathMates uses Supabase for database operations and authentication.
+
+The application expects the following tables:
+
+- `alumni`
+- `opportunities`
+- `saved_connections`
+- `session_requests`
+
+Make sure the database tables, columns, authentication settings, and Row Level Security policies match the application's requirements.
+
+## Environment Variables
+
+| Variable | Description |
+|---|---|
+| `VITE_SUPABASE_URL` | Your Supabase project URL |
+| `VITE_SUPABASE_ANON_KEY` | Your Supabase publishable key or legacy anon key |
+
+Never expose your Supabase service role key in frontend code or commit secret credentials to GitHub.
+
+## Project Structure
+
+```text
+PathMates/
+├── public/
+├── src/
+│   ├── lib/
+│   │   └── supabaseClient.js
+│   ├── App.jsx
+│   ├── App.css
+│   └── index.css
+├── .env.local
+├── .gitignore
+├── index.html
+├── package.json
+└── README.md
 ```
 
-## Documentation
+The exact structure may vary depending on your project setup.
 
-See https://react.dev/
+## Security
 
-## API
+- Keep `.env.local` out of version control.
+- Never commit private API keys or service role keys.
+- Configure appropriate Row Level Security policies in Supabase.
+- Restrict access to user-specific data.
 
-See https://react.dev/reference/react
+## Contributing
+
+Contributions and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Open a pull request.
+
+## License
+
+No license has been specified yet. Add a license before distributing the project for reuse.
