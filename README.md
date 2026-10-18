@@ -1,112 +1,87 @@
-# PathMates
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-react.svg" alt="Lucide icon library for React applications." width="540">
+  </a>
+</p>
 
-PathMates is a platform that helps students connect with alumni, explore career opportunities, save professional connections, and request mentorship sessions.
+<p align="center">
+Lucide icon library for React applications.
+</p>
 
-## Features
+<div align="center">
 
-- **Alumni Directory:** Discover alumni and explore their professional backgrounds.
-- **Search and Filters:** Find relevant alumni and opportunities.
-- **Career Opportunities:** Browse internships, jobs, and other opportunities.
-- **Saved Connections:** Save alumni profiles for future reference.
-- **Mentorship Requests:** Request mentorship sessions with alumni.
-- **Authentication:** Sign in using email-based OTP authentication.
-- **Responsive Design:** Access the platform across desktop and mobile devices.
+  [![npm](https://img.shields.io/npm/v/lucide-react?color=blue)](https://www.npmjs.com/package/lucide-react)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react)
+  [![License](https://img.shields.io/badge/license-ISC-green)](https://lucide.dev/license)
+</div>
 
-## Tech Stack
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/react">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
 
-- **Frontend:** React, Vite
-- **Styling:** CSS
-- **Icons:** Lucide React
-- **Backend and Database:** Supabase
-- **Authentication:** Supabase Auth
+# Lucide React
 
-## Getting Started
+Implementation of the Lucide icon library for React applications.
 
-### Prerequisites
+## Installation
 
-Make sure you have the following installed:
-
-- Node.js
-- npm
-- A Supabase account
-
-
-
-4. Create a `.env.local` file in the root directory.
-
-5. Add your Supabase project credentials:
-
-   ```env
-   VITE_SUPABASE_URL=your_supabase_project_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_publishable_or_anon_key
-   ```
-
-6. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-7. Open the local URL displayed in your terminal.
-
-## Supabase Setup
-
-PathMates uses Supabase for database operations and authentication.
-
-The application expects the following tables:
-
-- `alumni`
-- `opportunities`
-- `saved_connections`
-- `session_requests`
-
-Make sure the database tables, columns, authentication settings, and Row Level Security policies match the application's requirements.
-
-## Environment Variables
-
-| Variable | Description |
-|---|---|
-| `VITE_SUPABASE_URL` | Your Supabase project URL |
-| `VITE_SUPABASE_ANON_KEY` | Your Supabase publishable key or legacy anon key |
-
-Never expose your Supabase service role key in frontend code or commit secret credentials to GitHub.
-
-## Project Structure
-
-```text
-PathMates/
-├── public/
-├── src/
-│   ├── lib/
-│   │   └── supabaseClient.js
-│   ├── App.jsx
-│   ├── App.css
-│   └── index.css
-├── .env.local
-├── .gitignore
-├── index.html
-├── package.json
-└── README.md
+```sh
+pnpm add lucide-react
 ```
 
-The exact structure may vary depending on your project setup.
+```sh
+npm install lucide-react
+```
 
-## Security
+```sh
+yarn add lucide-react
+```
 
-- Keep `.env.local` out of version control.
-- Never commit private API keys or service role keys.
-- Configure appropriate Row Level Security policies in Supabase.
-- Restrict access to user-specific data.
+```sh
+bun add lucide-react
+```
 
-## Contributing
+## Documentation
 
-Contributions and suggestions are welcome.
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react)
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Open a pull request.
+## Community
+
+Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
 
 ## License
 
-No license has been specified yet. Add a license before distributing the project for reuse.
+Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
+
+[//]: <> (Sponsors)
+
+## Sponsors
+
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
+</a>
+
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
+
+### Hero backers 🦸
+
+<a href="https://zephyr-cloud.io/"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+
+### Awesome backers 🍺
+
+<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>
+<a href="https://www.paxhistoria.co/"><img src="https://lucide.dev/sponsors/paxhistoria.svg?" width="180" alt="Pax Historia – An alternate history sandbox game" /></a>
+
+### Backers ☕
+
+<a href="https://www.fina.money/"><img src="https://lucide.dev/sponsors/fina-money.png" width="180" alt="Fina Money – Modular Finance Tracker" /></a>
+
+### Other contributors 💸
+
+You can find all our past and non-recurring financial contributors at [our Open Collective page](https://opencollective.com/lucide-icons).
